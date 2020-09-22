@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Stickies.CalloutInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Azure" Margin="0" Opacity="0.9" OpacityMask="White" Height="768" Width="499">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28" Opacity="0.9"></StackPanel>
+        <!--ContentPanel - place additional content here-->
+
+        <TextBlock Name="textBlock1" Text="Say what?" Foreground="RoyalBlue" Margin="42,2,281,649" FontSize="32" FontWeight="SemiBold" Grid.Row="1" />
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Opacity="100" OpacityMask="Black" VerticalAlignment="Center" Margin="0,58,40,414" HorizontalAlignment="Right" Width="423" Height="251">
+
+            <Button Content="Done !" Height="72" HorizontalAlignment="Left" Margin="10,169,0,0" Name="btnDone" VerticalAlignment="Top" Width="160" Background="RoyalBlue" Foreground="AliceBlue"></Button>
+            <Button Content="Nopes !" Height="72" HorizontalAlignment="Left" Margin="242,169,0,0" Name="btnNopes" VerticalAlignment="Top" Width="160" Background="RoyalBlue" />
+            <TextBox Height="159" HorizontalAlignment="Left" Margin="10,10,0,0" Name="txtCallout" VerticalAlignment="Top" Width="392" AcceptsReturn="True" TextWrapping="Wrap" Background="Silver" BorderBrush="RoyalBlue" Opacity="0.9"/>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Stickies;component/Images/callBG.png" />
+            </Grid.Background>
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
